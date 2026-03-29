@@ -124,7 +124,7 @@ All models expose every single hyper-parameter for complete transparency.
 
 | Model Type | Implementation | Key Parameters Exposed | Best Gini (Val) |
 |-----------|--------------|----------------------|----------------|
-| Decision Tree | From scratch | `max_depth`, `min_samples_split`, `min_samples_leaf`, `max_features`, `pos_weight` | ~0.176 |
+| Decision Tree | From scratch | `max_depth`, `min_samples_split`, `min_samples_leaf`, `max_features`, `pos_weight` | ~0.2122 |
 | Random Forest | From scratch | `n_estimators`, `max_depth`, `min_samples_split`, `max_features`, `bootstrap`, `OOB` | 0.249 |
 | XGBoost-style GBM | From scratch | `n_estimators`, `learning_rate`, `max_depth`, `min_child_weight`, `colsample_bytree`, `subsample`, `reg_alpha`, `reg_lambda`, `reg_gamma`, `scale_pos_weight` | ~0.260 |
 | LightGBM-style GBM | From scratch | `num_iterations`, `num_leaves`, `min_data_in_leaf`, `min_sum_hessian_in_leaf`, `feature_fraction`, `bagging_fraction`, `reg_alpha`, `reg_lambda`, `GOSS` | 0.270+ |
