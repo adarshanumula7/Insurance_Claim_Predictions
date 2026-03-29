@@ -13,9 +13,9 @@ This confirms:
 
 ### 🔎 Modeling Implications:
 
--   ❌ Accuracy is not a reliable metric\
--   ✅ Use **AUC**
--   ✅ Use **Gini**
+-   ❌ Accuracy is **not** a reliable metric
+-   ✅ Use **AUC-ROC**
+-   ✅ Use **Normalized Gini**
 -   ✅ Use **F1-score**
 -   ✅ Use **Precision--Recall**
 -   ✅ Use **class weights or boosting models**

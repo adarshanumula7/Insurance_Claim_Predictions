@@ -1,10 +1,5 @@
-1. Which features matter?
-2. Which features are redundant?
-3. How to preprocess?
-4. Which model is suitable?
-
-# Exploratory Data Analysis (EDA)
-## Porto Seguro Safe Driver Prediction
+# Porto Seguro Safe Driver Prediction
+## Exploratory Data Analysis (EDA)
 
 ---
 
@@ -36,13 +31,13 @@ Features were first separated into:
 |ps_car_14     |     42,620    | 7.16%     |
 |ps_car_07_cat |     11,489    | 1.93%     |
 |ps_ind_05_cat |     5809      | 0.97%     |
-|ps_car_09_cat |	569	       | 0.095%    |
-|ps_ind_02_cat |	216	       | 0.036%    |
-|ps_car_01_cat |	107	       | 0.018%    |
-|ps_ind_04_cat |	83	       | 0.014%    |
-|ps_car_02_cat |	5	       | 0.00084%  |
+|ps_car_09_cat |	 569	   | 0.095%    |
+|ps_ind_02_cat |	 216	   | 0.036%    |
+|ps_car_01_cat |	 107	   | 0.018%    |
+|ps_ind_04_cat |	 83	       | 0.014%    |
+|ps_car_02_cat |	 5	       | 0.00084%  |
 |ps_car_11	   |     5	       | 0.00084%  |
-|ps_car_12	   |      1        | 0.00017%  |
+|ps_car_12	   |     1         | 0.00017%  |
 
 ---
 
@@ -88,7 +83,7 @@ Features were first separated into:
 
 #### 2.1.1 Histplots
 
-Key Observations:
+**Key Observations:**
 - Strong **class imbalance** (majority target = 0)
 - Significant overlap between target classes &rarr; weak linear separability
 
@@ -200,8 +195,8 @@ Analysis using `value_counts(normalize=True)` revealed:
 
 ## 3. Correlation Analysis
 - use Pearson correlation (`df.corr()`)
-- No numeric feature pairs showed strong linear correlation
-- Multicollinearity is not a major concern
+- **No** numeric feature pairs showed strong linear correlation
+- Multicollinearity is **not a major concern**
 
 ---
 
@@ -210,6 +205,11 @@ Analysis using `value_counts(normalize=True)` revealed:
 Target Distribution:
 - `target = 0` &rarr; ~96% of samples
 - `target = 1` &rarr; ~4% of samples
+
+**Modeling Implications:**
+- Accuracy is misleading
+- Primary metrics: **AUC-ROC** and **Normalized Gini** (`2 × AUC - 1`)
+- Use class weights / scale_pos_weight in boosting models
 
 ---
 
