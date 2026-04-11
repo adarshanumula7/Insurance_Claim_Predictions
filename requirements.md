@@ -1,5 +1,14 @@
 # Project Requirements
 
+## Repo Structure
+- Create below folders in you repo.
+
+1. Raw-Dataset (Store raw Dataset test.csv, train.csv here)
+2. Cleaned-Dataset
+3. Final-Submission
+
+---
+
 ## Core Dependencies
 
 | Package               | Version (tested) | Purpose                                      |
