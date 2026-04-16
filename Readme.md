@@ -126,7 +126,7 @@ All models expose every single hyper-parameter for complete transparency.
 |-----------|--------------|----------------------|----------------|
 | Decision Tree | From scratch | `max_depth`, `min_samples_split`, `min_samples_leaf`, `max_features`, `pos_weight` | ~0.2122 |
 | Random Forest | From scratch | `n_estimators`, `max_depth`, `min_samples_split`, `max_features`, `bootstrap`, `OOB` | 0.249 |
-| XGBoost-style GBM | From scratch | `n_estimators`, `learning_rate`, `max_depth`, `min_child_weight`, `colsample_bytree`, `subsample`, `reg_alpha`, `reg_lambda`, `reg_gamma`, `scale_pos_weight` | ~0.260 |
+| XGBoost-style GBM | From scratch | `n_estimators`, `learning_rate`, `max_depth`, `min_child_weight`, `colsample_bytree`, `subsample`, `reg_alpha`, `reg_lambda`, `reg_gamma`, `scale_pos_weight` | ~0.258 |
 | LightGBM-style GBM | From scratch | `num_iterations`, `num_leaves`, `min_data_in_leaf`, `min_sum_hessian_in_leaf`, `feature_fraction`, `bagging_fraction`, `reg_alpha`, `reg_lambda`, `GOSS` | 0.270+ |
 
 ### Included in All Notebooks
@@ -144,7 +144,7 @@ All models expose every single hyper-parameter for complete transparency.
 |------|---------------|------|---------|
 | Decision Tree (scratch) | ~0.588 | ~0.176 | Strong baseline |
 | Random Forest (scratch) | 0.624 | 0.249 | Best from-scratch ensemble |
-| XGBoost (scratch) | ~0.630 | ~0.260 | Excellent non-linear capture |
+| XGBoost (scratch) | ~0.629 | ~0.258 | Excellent non-linear capture |
 | LightGBM (scratch) | 0.635+ | 0.270+ | Leaf-wise growth gives best gain |
 
 
@@ -160,9 +160,14 @@ cd Porto-Seguro-Safe-Driver
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run notebooks in order
-jupyter notebook notebooks/01_EDA.ipynb
-jupyter notebook notebooks/02_Feature_Engineering.ipynb
+# 3. Create below folders in your repo.
+1. Raw-Dataset (Store raw Dataset test.csv, train.csv here)
+2. Cleaned-Dataset
+3. Final-Submission
+
+# 4. Run notebooks in order
+jupyter notebook EDA/EDA.ipynb
+jupyter notebook Models/feature_engineering.ipynb
 # Continue with model notebooks...
 ```
 
@@ -192,8 +197,9 @@ See `requirements.md` for full list.
 
 Located in `Final-Submission/`:
 
-- `RF-submission_model1.csv`  
-- `RF-submission_model2.csv` ← Best from-scratch Random Forest  
+- `DT-submission_best.csv`  
+- `RF-submission_best.csv` 
+- `XGBoost-submission_best` ← Best from-scratch Random Forest  
 
 Ready for Kaggle submission.
 
